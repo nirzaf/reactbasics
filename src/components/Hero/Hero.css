@@ -1,0 +1,128 @@
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(100, 108, 255, 0.4);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 350px;
+}
+
+.floating-card {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 2;
+  top: 50px;
+  left: 50px;
+}
+
+.floating-card.second {
+  top: 120px;
+  left: 120px;
+  z-index: 1;
+}
+
+.floating-card.third {
+  top: 200px;
+  left: 80px;
+  z-index: 0;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+}
+
+.card-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e4e9f2;
+  margin-right: 15px;
+}
+
+.card-info {
+  flex: 1;
+}
+
+.card-line {
+  height: 12px;
+  background-color: #e4e9f2;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.card-line.short {
+  width: 70%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .hero-image {
+    width: 100%;
+  }
+  
+  .floating-card {
+    transform: scale(0.8);
+  }
+}
